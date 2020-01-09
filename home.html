@@ -1,0 +1,5 @@
+	uint16_t count_high = eepromRead(0) & 0xff;
+	uint16_t count_low = (eepromRead(1) >> 8) & 0xff;
+	count = (count_high << 8) | count_low;
+	add_index = eepromRead(2) & 0xff;
+	count_address = add_index;
